@@ -16,7 +16,7 @@ exports.path = {
     fonts: `${buildFolder}/assets/fonts/`,
   },
   src: {
-    markup: `${srcFolder}/views/pages/**/*.pug`,
+    markup: `${srcFolder}/views/pages/**/*.njk`,
     styles: `${srcFolder}/styles/*.scss`,
     scripts: `${srcFolder}/scripts/*.js`,
     images: `${srcFolder}/assets/img/**/*.{webp,jpg,jpeg,png,svg,gif}`,
@@ -24,7 +24,7 @@ exports.path = {
     resources: `${srcFolder}/assets/resources/**/*.*`,
   },
   watch: {
-    markup: `${srcFolder}/views/**/*.pug`,
+    markup: `${srcFolder}/views/**/*.njk`,
     styles: `${srcFolder}/styles/**/*.scss`,
     scripts: `${srcFolder}/scripts/**/*.js`,
     images: `${srcFolder}/assets/img/**/*.*`,

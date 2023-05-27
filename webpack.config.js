@@ -12,6 +12,10 @@ module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src/scripts/app.js'),
   },
+  devServer: {
+    static: 'dist',
+
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'assets/scripts/[name].js',
@@ -41,13 +45,10 @@ module.exports = {
         use: ['babel-loader'],
       },
       {
-        test: /\.(scss|sass|css)$/,
-        use: [
-          MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
-        ],
-      }
+        test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      },
     ],
   },
   plugins: [
